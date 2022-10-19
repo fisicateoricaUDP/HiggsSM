@@ -196,9 +196,9 @@ Print["Files *Top?.ps saved in /SETOP/HiggsSE/Top?"]
 
 
 (* 6 *)
-(**************************************************************************)
-(*** Generation of the Amplitudes. The amplitudes are saved in txt files **)
-(**************************************************************************)
+(***********************************************************************************)
+(*** Generation of the FeynArts Amplitudes. The amplitudes are saved in txt files **)
+(***********************************************************************************)
 
 TxtFile[dir1_,dir2_, dir3_, Amp_, name_] := Put[Amp, ToFileName[{dir1,dir2,dir3},StringJoin[dir2,name]]];
 DistributeDefinitions[TxtFile];
