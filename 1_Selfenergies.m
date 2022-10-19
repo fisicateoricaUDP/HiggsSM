@@ -12,8 +12,8 @@
 *)
 
 (* :Summary:	This is a Mathematica package for the calculation and evaluation
-				of the Higgs boson mass corrections at three-loop
-				level in the top Yukawa sector of the SM.   *)
+		of the Higgs boson mass corrections at three-loop level in the 
+		top Yukawa sector of the SM.   *)
 
 (* ------------------------------------------------------------------------ *)
 
@@ -21,7 +21,7 @@
 (****************************************************************************************)
 (** We need the Mathematica packages FeynCalc and FeynArts. We call FeynArts patched   **)
 (** to Feyncalc and avoid the alert messages.                                          **)
-(** Please specify the path where Feyncalc package has been saved                      **)
+(** Please specify the path where Feyncalc package has been saved.                     **)
 (****************************************************************************************)
  
 PrependTo[$Path, ToFileName[{"/path","to","FeynCalc"}]];
@@ -32,10 +32,10 @@ Get["FeynCalc.m"];
 $FAVerbose = 0;
 Off[Paint::nolevel]
 
-(***********************************************************************************)
-(** In order to parallelize some applications in the routine we use the function  **) 
-(** LaunchKernels[ ].                                                             **)
-(***********************************************************************************)  
+(********************************************************************************)
+(** In order to parallelize some functions of the routine we use the function  **) 
+(** LaunchKernels[ ].                                                          **)
+(********************************************************************************)  
 
 LaunchKernels[10]; Print["Number of Kernels: ", Length[ Kernels[] ] ]
 
@@ -102,8 +102,8 @@ qpatt= Flatten[ tpatt | bpatt ];
 
 (* (3) *)
 (***********************************************************************)
-(** Selection rules for 3L Self-Energy diagrams.                      **)
-(** Basically we specify which fields can be inserted on each line    **)
+(** Selection rules for 3L self-energy diagrams.                      **)
+(** Basically we specify which fields can be inserted on each line.   **)
 (***********************************************************************)
 
 SESelRules = {
