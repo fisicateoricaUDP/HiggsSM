@@ -42,9 +42,9 @@ Off[Simplify::time];
 ];
 
                 
-      (*************************************************************************)
-      (** The shift to the FeynCalc language is implemented in the next lines **)   
-      (*************************************************************************)
+      (************************************************************************************)
+      (** The shift from FeynArts to FeynCalc language is implemented in the next lines. **)   
+      (************************************************************************************)
 
 
 TempDirName = ToFileName[{"/Path","to","outputs","HiggsSE"}];
