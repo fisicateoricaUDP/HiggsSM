@@ -1,3 +1,8 @@
+(*************************************************************************)
+(** This routine implements the dimensional regularization of the Higgs **)
+(** self-energy amplitudes produced by the code 2_SelfenergyAmps.m      **)
+(*************************************************************************)
+
 PrependTo[$Path, ToFileName[{"/Path","to","FeynCalc"}]];
 
 $FeynCalcStartupMessages = False;
