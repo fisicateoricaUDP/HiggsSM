@@ -15,7 +15,9 @@ Off[Simplify::time];
 
 
 << SimplificationDefinitionsB`;
-(* This Mathematica package can be consulted in http://www.feynhiggs.de/ *)
+(** This Mathematica package is included in FeynHiggs and  **) 
+(** can be consulted in http://www.feynhiggs.de/           **)
+
 
 var = ToExpression[$ScriptCommandLine[[2]]]; 
 LaunchKernels[var];
