@@ -1,5 +1,23 @@
 (* ::Package:: *)
 
+(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
+(* :Title: HiggsSM															*)
+
+(*
+	
+	This software is covered by the GNU General Public License 3.
+	Copyright (C) 2022 Edilson A. Reyes R.
+	
+*)
+
+(* :Summary:	This is a Mathematica package for the calculation and evaluation
+				of the Higgs boson mass corrections at three-loop
+				level in the top Yukawa sector of the SM.   *)
+
+(* ------------------------------------------------------------------------ *)
+
+
 (****************************************************************************************)
 (** We need the Mathematica packages FeynCalc and FeynArts. We call FeynArts patched   **)
 (** to Feyncalc and avoid the alert messages.                                          **)
