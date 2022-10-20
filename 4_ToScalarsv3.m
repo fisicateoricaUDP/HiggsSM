@@ -283,6 +283,10 @@ ToScalarsNP[amp_] := ToScalarsNP[amp] =
     Collect[ampp, Union@Cases[ampp, INT[__], Infinity], Simplify];
    ampp ]
 
+(*************************************************************************************)
+(** The function FCtoReduze[] changes the integrals in the FeynCalc notation to the **)
+(** language of Reduze.                                                             **)
+(*************************************************************************************)
 
 FCtoReduze[amp_] :=
   Module[{INTtoReduze, lists, masses, FamDiff, listn, name, rules,
