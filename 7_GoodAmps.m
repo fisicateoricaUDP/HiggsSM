@@ -1,19 +1,18 @@
 (* ::Package:: *)
 
-TempDirName = ToFileName[{"/home","edilson","Escritorio","Servidor","SMHiggs","outputs"}];
+TempDirName = ToFileName[{"/Path","to","outputs"}];
 
-Amps[n_]:=Get["ScalarAmpsLandauv3"<>ToString[n],Path->{TempDirName}]
+Amps[n_] := Get["ScalarAmpsLandauv3"<>ToString[n],Path->{TempDirName}]
 
 Rulesfire[n_] := Get["rulesfire"<>ToString[n],Path->{ToFileName[{TempDirName,"reductions"}]}]
 
 
-
 GoodRules[n_] := Block[{rules, srules,res},
-                                                rules = Select[Association[Rulesfire[n]],#=!=0&];
-                                                rules = Map[(# // Factor)&,rules];                                                
-                                                srules = Select[rules,TrueQ[(Denominator[# // Factor]/. {d->4}) =!=0]&];
-                                                res = srules /. {d->4}
-                                                ]
+                       rules = Select[Association[Rulesfire[n]],#=!=0&];
+                       rules = Map[(# // Factor)&,rules];                                                
+                       srules = Select[rules,TrueQ[(Denominator[# // Factor] /. {d->4}) =!=0]&];
+                       res = srules /. {d->4}
+                                           ]
 
 Zerosectors[n_]:= Select[ Association[Rulesfire[n]],#==0&]
 
@@ -24,12 +23,12 @@ ToExpression@StringJoin[ToString /@ Select[ToExpression@Characters[var], Integer
 
 
 Topamp[n_]:=Block[{changes, amp},
-                                 changes ={INT[name_, _, _, _, _, indices__] :> G@@{Name[name], indices},
-                                                         p -> Sqrt[S], MT -> Sqrt[T], yt -> y};                                    
-                                                         amp = Amps[n] /. changes /. Zerosectors[n] ;
-                                                         amp = y^6*Collect[FactorTerms[
-                                                         Coefficient[Plus@@amp,y,6], G[___]],{S,T},Simplify];
-                                                         amp ]
+                                 changes = {INT[name_, _, _, _, _, indices__] :> G@@{Name[name], indices},
+                                            p -> Sqrt[S], MT -> Sqrt[T], yt -> y};                                    
+                                 amp = Amps[n] /. changes /. Zerosectors[n] ;
+                                 amp = y^6*Collect[FactorTerms[
+                                                   Coefficient[Plus@@amp,y,6], G[___]],{S,T},Simplify];
+                   amp ]
 
 Goodamp[n_]:= Goodamp[n] = Block[{scalars,masters},
                                   scalars =  Union@Cases[Topamp[n],G[__],Infinity];
