@@ -28,7 +28,8 @@ ToExpression@
    ToString /@ Select[ToExpression@Characters[var], IntegerQ]]
 
 
-RulesFire[m_] := Rules[m] /. {INT[name_, _, _, _, _, indices__] :> G@@{Name[name], indices}}
+RulesFire[m_] := Rules[m] /. {INT[name_, _, _, _, _, indices__] :> G@@{Name[name], indices},
+                              Mh -> s, MT -> t}
 
 
 Block[ {j},
