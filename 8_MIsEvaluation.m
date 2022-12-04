@@ -1,12 +1,12 @@
-#!/usr/local/Wolfram/Mathematica/8.0/SystemFiles/Kernel/Binaries/Linux-x86-64/MathematicaScript -script
+#!/Path/to/MathematicaScript -script
 
-PrependTo[$Path, ToFileName[{"/home","edilson","myprograms","fiesta","FIESTA5"}]];
+PrependTo[$Path, ToFileName[{"/Path","to","FIESTA5"}]];
 Get["FIESTA5.m"];
 
-TempDirName = DirectoryName[FindFile["MIsEval.m"]];
+TempDirName = DirectoryName[FindFile["MIsEvaluation.m"]];
 SetDirectory[TempDirName];
 
-masters = Get["Masterspnp"];
+masters = Get["Masters"];
 
 Qin = ToExpression[$ScriptCommandLine[[2]]];
 Q = 0.01*Qin;
@@ -21,7 +21,7 @@ Rules[n_] := Block[{masses},
                masses ];
 
 
-SetOptions[FIESTA, "NumberOfSubkernels" -> 10, "NumberOfLinks" -> 5, 
+SetOptions[FIESTA, "NumberOfSubkernels" -> 5, "NumberOfLinks" -> 5, 
 	   "ComplexMode" -> True, DataPath -> TempDirName]
 
 
