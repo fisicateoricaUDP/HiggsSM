@@ -22,7 +22,7 @@ Rules[n_] := Block[{masses},
 
 
 SetOptions[FIESTA, "NumberOfSubkernels" -> 5, "NumberOfLinks" -> 5, 
-	   "ComplexMode" -> True, DataPath -> TempDirName]
+	   "ComplexMode" -> False, DataPath -> TempDirName]
 
 
 listrules = Table[
