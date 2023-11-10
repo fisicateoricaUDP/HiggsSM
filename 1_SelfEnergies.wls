@@ -1,5 +1,23 @@
 #!/usr/bin/env wolframscript
+
 (* ::Package:: *)
+
+(* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *)
+
+(* :Title: QCD contributions to the Higgs Boson Mass															*)
+
+(*
+	
+	This software is covered by the GNU General Public License 3.
+	Copyright (C) 2022 Edilson A. Reyes R.
+	
+*)
+
+(* :Summary:	This is a Mathematica package for the calculation and evaluation
+		of the Higgs boson mass corrections at three-loop level in the 
+		mixed top Yukawa - QCD sector of the SM.   *)
+
+(* ------------------------------------------------------------------------ *)
 
 $FeynCalcStartupMessages = False;
 $LoadAddOns={"FeynArts"};
